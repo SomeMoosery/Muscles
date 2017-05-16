@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "201432538096",
+    "firebase_url": "https://muscles-25a97.firebaseio.com",
+    "project_id": "muscles-25a97",
+    "storage_bucket": "muscles-25a97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201432538096:android:d49f98b0aee4afd6",
+        "android_client_info": {
+          "package_name": "carter.muscles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "201432538096-ku2iul5u3jl9tsu6pbndpgqrdrepb599.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "carter.muscles",
+            "certificate_hash": "071de320632bde355ca069881e08bd709c545fdc"
+          }
+        },
+        {
+          "client_id": "201432538096-vvlsi7qa5ftet0qoakdnfetqpq3tavma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5EXDORHwgNLAVm7Z3KO-5ULn4S9pmUQU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "201432538096-vvlsi7qa5ftet0qoakdnfetqpq3tavma.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
