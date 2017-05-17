@@ -53,6 +53,7 @@ public class SignInAccount extends BaseActivity implements View.OnClickListener{
                             FirebaseUser user = mAuth.getCurrentUser();
                             Intent intent = new Intent(SignInAccount.this, HomePage.class);
                             startActivity(intent);
+                            finish(); //Ends activity so the user cannot just press back and go to sign-in screen
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.

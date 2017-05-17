@@ -22,21 +22,37 @@
             <TextView
                 android:id="@+id/message"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"/>
+                android:layout_height="100dp"
+                android:gravity="center_horizontal"/>
 
             <TextView
                 android:id="@+id/activity_home_page_is_email_verified"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_marginTop="20dp"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"/>
 
             <Button
                 android:id="@+id/verify_email_button"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:text="Verify Email" />
+
+            <Button
+                android:id="@+id/sign_out_button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_horizontal"
+                android:text="Sign Out"/>
+
+            <Button
+                android:id="@+id/complete_info_button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_horizontal"
+                android:text="Complete Your Profile!"/>
 
         </LinearLayout>
 

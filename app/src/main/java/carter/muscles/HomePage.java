@@ -1,5 +1,7 @@
 package carter.muscles;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -17,11 +19,10 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class HomePage extends AppCompatActivity {
 
-    private TextView mTextMessage;
-    private TextView isVerified;
-    private Button verifyButton;
-
+    private TextView mTextMessage, isVerified;
+    private Button verifyButton, signOutButton, completeInfoButton;
     private FirebaseUser user;
+    public static Activity homePage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -30,7 +31,7 @@ public class HomePage extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText("Welcome" + user.getEmail());
+                    mTextMessage.setText("Welcome " + user.getEmail());
                     return true;
                 case R.id.navigation_dashboard:
                     mTextMessage.setText(R.string.title_dashboard);
@@ -52,12 +53,15 @@ public class HomePage extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         isVerified = (TextView) findViewById(R.id.activity_home_page_is_email_verified);
         verifyButton = (Button) findViewById(R.id.verify_email_button);
+        signOutButton = (Button) findViewById(R.id.sign_out_button);
+        completeInfoButton = (Button) findViewById(R.id.complete_info_button);
+        homePage = this;
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
-        mTextMessage.setText("Welcome" + user.getEmail());
+        mTextMessage.setText("Welcome " + user.getEmail());
         if (user.isEmailVerified()){
             isVerified.setText("Email is verified");
         }
@@ -69,6 +73,24 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendEmailVerification();
+            }
+        });
+
+        signOutButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(HomePage.this, LoginIntro.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        completeInfoButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(HomePage.this, CompleteProfileActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -54,6 +54,7 @@ public class CreateAccount extends BaseActivity implements View.OnClickListener{
                             FirebaseUser user = mAuth.getCurrentUser();
                             Intent intent = new Intent(CreateAccount.this, HomePage.class);
                             startActivity(intent);
+                            finish(); //Makes it so that user cannot go back to create account screen after creating account
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
