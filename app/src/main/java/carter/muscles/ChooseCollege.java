@@ -2,10 +2,16 @@ package carter.muscles;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class ChooseCollege extends AppCompatActivity {
+
+    private String TAG = "ChooseCollege: ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,6 +19,7 @@ public class ChooseCollege extends AppCompatActivity {
         setContentView(R.layout.activity_choose_college);
 
         populateListview();
+        registerClickCallback();
     }
 
     private void populateListview() {
@@ -69,5 +76,20 @@ public class ChooseCollege extends AppCompatActivity {
         //Configure ListView
         ListView collegeList = (ListView) findViewById(R.id.college_list_view);
         collegeList.setAdapter(adapter);
+        }
+
+        //Click handler
+        private void registerClickCallback() {
+            ListView list = (ListView) findViewById(R.id.college_list_view);
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    TextView tv = (TextView) view;
+                    String collegeClicked = tv.getText().toString().trim();
+                    getApplication().setTheme(R.style.WisconsinTheme);
+                    Log.i("Test", "Working");
+                    //recreate();
+                }
+            });
         }
     }
