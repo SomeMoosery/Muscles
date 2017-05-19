@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
@@ -7,218 +7,17 @@
     android:orientation="vertical"
     tools:context="carter.muscles.ChooseCollege">
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="40dp"
+        android:text="Choose your college" />
 
-        <TextView
-            android:id="@+id/choose_college_title"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:textSize="40dp"
-            android:text="Choose Your College"/>
+    <ListView
+        android:id="@+id/college_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
-        <TextView
-            android:id="@+id/list_alabama"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Alabama"/>
-        <TextView
-            android:id="@+id/list_arizona"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Arizona"/>
-        <TextView
-            android:id="@+id/list_arizona_sate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Arizona State University"/>
-        <TextView
-            android:id="@+id/list_auburn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Auburn University"/>
-        <TextView
-            android:id="@+id/list_arkansas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Arkansas"/>
-        <TextView
-            android:id="@+id/list_yeah_whatever"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of California, Berkeley"/>
-        <TextView
-            android:id="@+id/list_ucla"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of California, Los Angeles"/>
-        <TextView
-            android:id="@+id/list_stoners"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Colorado, Boulder"/>
-        <TextView
-            android:id="@+id/list_florida"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Florida"/>
-        <TextView
-            android:id="@+id/list_georgia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Georgia"/>
-        <TextView
-            android:id="@+id/list_illinois"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Illinois"/>
-        <TextView
-            android:id="@+id/list_indiana"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Indiana University"/>
-        <TextView
-            android:id="@+id/list_iowa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Iowa"/>
-        <TextView
-            android:id="@+id/list_kentucky"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Kentucky"/>
-        <TextView
-            android:id="@+id/list_lsu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Louisiana State University"/>
-        <TextView
-            android:id="@+id/list_maryland"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Maryland"/>
-        <TextView
-            android:id="@+id/list_michigan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Michigan"/>
-        <TextView
-            android:id="@+id/list_michigan_state"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Michigan State University"/>
-        <TextView
-            android:id="@+id/list_cock_suckers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Minnesota"/>
-        <TextView
-            android:id="@+id/list_ole_miss"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Mississippi"/>
-        <TextView
-            android:id="@+id/list_mississippi_state"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mississippi State University"/>
-        <TextView
-            android:id="@+id/list_mizzou"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Missouri"/>
-        <TextView
-            android:id="@+id/list_nebraska"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Nebraska"/>
-        <TextView
-            android:id="@+id/list_northwestern"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Northwestern University"/>
-        <TextView
-            android:id="@+id/list_ohio_state"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ohio State University"/>
-        <TextView
-            android:id="@+id/list_oregon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Oregon"/>
-        <TextView
-            android:id="@+id/list_oregon_state"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Oregon State University"/>
-        <TextView
-            android:id="@+id/list_penn_state"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pennsylvania State University"/>
-        <TextView
-            android:id="@+id/list_purdue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Purdue University"/>
-        <TextView
-            android:id="@+id/list_slutgers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rutgers University"/>
-        <TextView
-            android:id="@+id/list_fake_usc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of South Carolina"/>
-        <TextView
-            android:id="@+id/list_real_usc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Southern California"/>
-        <TextView
-            android:id="@+id/list_wow_look_how_sick_i_am"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Stanford University"/>
-        <TextView
-            android:id="@+id/list_tennessee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Tennessee"/>
-        <TextView
-            android:id="@+id/list_texas_am"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Texas A&amp;M University"/>
-        <TextView
-            android:id="@+id/list_utah"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Utah"/>
-        <TextView
-            android:id="@+id/list_washington"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University of Washington"/>
-        <TextView
-            android:id="@+id/list_washington_state"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Washington State University"/>
-        <TextView
-            android:id="@+id/list_fucking_badgers_baby_on_wisconsin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="THE University of Wisconsin"/>
-        <TextView
-            android:id="@+id/list_rich_dumb_kids"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vanderbilt University"/>
-    </LinearLayout>
+    </ListView>
 
-</ScrollView>
+</LinearLayout>
