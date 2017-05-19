@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class HomePage extends AppCompatActivity {
 
     private TextView mTextMessage, isVerified;
-    private Button verifyButton, signOutButton, completeInfoButton;
+    private Button verifyButton, signOutButton, completeInfoButton, chooseCollegeButton;
     private FirebaseUser user;
     public static Activity homePage;
 
@@ -50,13 +50,20 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+        //Views
         mTextMessage = (TextView) findViewById(R.id.message);
         isVerified = (TextView) findViewById(R.id.activity_home_page_is_email_verified);
+
+        //Buttons
         verifyButton = (Button) findViewById(R.id.verify_email_button);
         signOutButton = (Button) findViewById(R.id.sign_out_button);
         completeInfoButton = (Button) findViewById(R.id.complete_info_button);
+        chooseCollegeButton = (Button) findViewById(R.id.choose_college_button);
+
+        //Misc
         homePage = this;
 
+        //Navigation Elements
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -90,6 +97,14 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(HomePage.this, CompleteProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        chooseCollegeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, ChooseCollege.class);
                 startActivity(intent);
             }
         });
